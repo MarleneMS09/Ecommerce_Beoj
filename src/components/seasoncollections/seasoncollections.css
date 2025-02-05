@@ -1,0 +1,124 @@
+/* Contenedor principal */
+.season-collections {
+  text-align: center;
+  padding: 50px 50px;
+  background-color: #fff;
+}
+
+.season-collections h2 {
+  margin-top: 0; 
+  margin-bottom: 60px; 
+  font-size: 40px; 
+  font-weight: 800; 
+  color: #333; 
+  font-family: "Inter", sans-serif; 
+}
+
+.collections-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px; 
+  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en filas */
+}
+
+.collection-card {
+  flex: 1 1 calc(33.333% - 50px);
+  max-width: 500px;
+  background-color: none!; 
+  border: none important!; 
+  box-shadow: none !important; 
+  overflow: hidden; 
+  text-align: center; 
+  padding: 0; 
+  margin: 0; 
+  outline: none
+
+
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden; /* Recortar contenido excedente */
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que la imagen se ajuste */
+}
+
+.sale-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #110c0b;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 200;
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+
+.collection-card h3 {
+  margin: 30px 0 20px;
+  font-size: 20px; 
+  font-weight: 700;
+  color: #333;
+}
+
+.read-more-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #110303; /* Fondo del botón */
+  color: #fff; /* Texto blanco */
+  font-size: 15px; 
+  font-weight: 300;
+  padding: 14px 40px; 
+  border: none; /* Sin borde */
+  border-radius: 12px; /* Bordes redondeados */
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Animación en hover */
+  cursor: pointer;
+  margin-bottom: 30px; 
+  margin-top: 15px;
+}
+
+.read-more-button:hover {
+  background-color: #555; /* Cambio de color en hover */
+}
+
+
+/* Media Query: Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .season-collections h2 {
+      font-size: 18px; /* Tamaño más pequeño para móviles */
+      font-weight: 700; /* Asegura que sea bold */
+      text-align: left; /* Alineación a la izquierda */
+      line-height: 1.4; /* Espaciado entre líneas */
+      padding: 0 20px; /* Ajuste interno para evitar que se pegue */
+      margin-top: 10px; /* Margen superior */
+      margin-bottom: 30px; /* Margen inferior para dar espacio a las cards */
+      color: #333; /* Asegura que el color sea visible */
+  }
+
+  .collections-container {
+      flex-direction: column; /* Mostrar tarjetas en una sola columna */
+      gap: 40px; /* Espaciado entre las tarjetas */
+  }
+
+  .collection-card {
+      flex: 1 1 100%; /* Ocupa el 100% del ancho */
+      width: 100%; /* Asegura que se expanda completamente */
+  }
+
+  .image-container img {
+      height: auto; /* Ajustar automáticamente la altura */
+  }
+
+  .read-more-button {
+      font-size: 16px; /* Ajuste del tamaño del texto */
+      padding: 12px 25px; /* Espaciado interno */
+  }
+}

@@ -1,0 +1,142 @@
+.product-gallery {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f4eb; /* Match the background color */
+    padding: 40px 20px; /* Add padding to space the section */
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #333; /* Slightly darker title text */
+    margin-right: 80px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center; /* Center the tabs */
+    align-items: center; /* Align tabs vertically */
+    gap: 29px; /* Equal spacing between tabs */
+    margin-bottom: 30px;
+    background-color: #f8f4eb; /* Off-white background for the entire tab bar */
+    padding: 10px; /* Add padding around the tabs */
+    border-radius: 10px; /* Rounded edges for the tab container */
+  }
+  
+  .tabs button {
+    background: #fff; /* Default white background */
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease;
+    color: #333; /* Default text color */
+  }
+  
+  .tabs button.active {
+    background-color: #000; /* Black background for the selected tab */
+    color: #fff; /* White text for contrast */
+    border-color: #000; /* Match border with background */
+  }
+  
+  .tabs button:hover:not(.active) {
+    background-color: #f0f0f0; /* Slight hover effect for inactive tabs */
+  }
+  
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns */
+    gap: 15px; /* Reduce space between items */
+    padding: 0 15%; /* Add padding to control alignment */
+    max-width: 100%; /* Ensure the grid doesn't stretch too wide */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .product-card {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: none;
+    transition: transform 0.2s;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .product-card p {
+    margin: 5px 0;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+    margin-right: 15rem;
+  }
+  
+  .pagination button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .pagination button.active {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  @media (max-width: 768px) {
+    .products {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+      gap: 10px;
+      padding: 0 5%; /* Reduced padding for better spacing */
+      max-width: 100%;
+    }
+  
+    .tabs {
+      flex-wrap: wrap; /* Allow tabs to wrap */
+      justify-content: center;
+      gap: 10px; /* Reduce space between tabs */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .products {
+      display: grid;
+      grid-template-columns: 1fr; /* Single column for mobile */
+      gap: 10px; /* Smaller gap for compact display */
+      padding: 0; /* Remove padding */
+      max-width: 100%; /* Ensure full width on mobile */
+      margin: 0 auto; /* Center the container */
+    }
+  
+    .product-card {
+      margin: 0 auto; /* Center individual product cards */
+      width: 90%; /* Ensure product cards fit the screen nicely */
+    }
+  
+    .tabs {
+      flex-direction: column; /* Stack tabs vertically */
+      justify-content: flex-start;
+      gap: 8px; /* Compact spacing for smaller screens */
+      align-items: center; /* Center tabs */
+    }
+  }
+  
