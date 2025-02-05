@@ -19,7 +19,7 @@ const HeroSection = () => {
         <p className="subtitle">벗나무</p>
         <div className="line"></div>
         <p className="description">
-          We make your dreams come true through each piece of clothing
+          We make your dreams come true through each piece of clothing.
         </p>
        
         <button className="hero-button">
